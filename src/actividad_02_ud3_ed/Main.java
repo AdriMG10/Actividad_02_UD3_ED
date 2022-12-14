@@ -60,26 +60,25 @@ public class Main {
 */            } catch (IOException ex) {
                 Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }while (opcion!=3);
+        }
+        while (opcion!=3);
         saldoActual = cuenta1.estado();
         System.out.println("El saldo actual es"+ saldoActual );
     }
-    public static void operativa_cuenta(CCuenta cuenta1, float cantidad,int opcion){
+    public static void operativa_cuenta(CCuenta cuenta1, float cantidad,int opcion) {
         if(opcion==2){
-            try 
-            {
+            try {
                 cuenta1.retirar(cantidad);
-            } catch (Exception e)
-            {
+            } 
+            catch (Exception e) {
                 System.out.print("Fallo al retirar");
             }
         }else if(opcion==1){
-            try
-            {
+            try {
                 System.out.println("Ingreso en cuenta");
                 cuenta1.ingresar(cantidad);
-            } catch (Exception e)
-            {
+            } 
+            catch (Exception e) {
                 System.out.print("Fallo al ingresar");
             }
         }
